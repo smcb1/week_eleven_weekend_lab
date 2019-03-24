@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class Flight {
 
@@ -67,7 +68,7 @@ public class Flight {
     }
 
     public int getPassengerCount() {
-        return this.passengerManifest.size();
+        return this.getPassengerManifest().size();
     }
 
     public int getFlightPassengers() {
@@ -75,7 +76,7 @@ public class Flight {
     }
 
     public void addPassengerToFlight(Passenger passenger) {
-        if(getPassengerCount() < this.plane.getCapacity()) {
+        if (getPassengerCount() < this.plane.getCapacity()) {
             this.passengerManifest.add(passenger);
         }
     }
@@ -83,4 +84,21 @@ public class Flight {
     public int getVacantSeats() {
         return plane.getCapacity() - getPassengerCount();
     }
+
+    public int getMaxBaggageWeight() {
+        return plane.getMaxBaggageWeight();
+    }
+
+    public int getCapacity() {
+        return plane.getCapacity();
+    }
+
+    public int getTotalPassengerBaggageWeight() {
+        int totalBaggageWeight = 0;
+        for (Passenger passenger : this.passengerManifest) {
+            totalBaggageWeight += passenger.getTotalPassengerBaggageWeight();
+        }
+        return totalBaggageWeight;
+    }
+
 }

@@ -10,7 +10,7 @@ public class PassengerTest {
 
     @Before
     public void setUp() {
-        passenger = new Passenger("Susie", 2);
+        passenger = new Passenger("Susie", 2, 20);
     }
 
     @Test
@@ -23,5 +23,9 @@ public class PassengerTest {
         assertEquals(2, passenger.getNumberOfBags());
     }
 
+    @Test
+    public void testTotalWeightOfOnePassengerBaggage() {
+        assertEquals(20, passenger.getTotalPassengerBaggageWeight());
+    }
 
 }

@@ -14,7 +14,7 @@ public class FlightTest {
 
     @Before
     public void setUp() {
-        passenger = new Passenger("Susie", 2);
+        passenger = new Passenger("Susie", 2, 20);
         plane = new Plane(PlaneType.BOEING737);
         lightPlane = new Plane(PlaneType.CESSNA172);
         flight = new Flight(plane, "BA-123", "GLA", "LGW", "09:30");

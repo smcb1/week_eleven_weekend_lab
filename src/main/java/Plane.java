@@ -18,7 +18,12 @@ public class Plane {
         return this.plane.getCapacity();
     }
 
-    public int getMaxWeight() {
-        return this.plane.getMaxWeight();
+    public int getMaxPlaneWeight() {
+        return this.plane.getMaxPlaneWeight();
     }
+
+    public int getMaxBaggageWeight() {
+        return this.plane.getMaxBaggageWeight();
+    }
+
 }

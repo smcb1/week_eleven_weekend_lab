@@ -1,11 +1,13 @@
 public class Passenger {
 
     private String name;
-    private int numberOfBags;
+    private int numberOfBags, totalBaggageWeight;
 
-    public Passenger(String name, int numberOfBags) {
+    public Passenger(String name, int numberOfBags, int totalBaggageWeight) {
         this.name = name;
         this.numberOfBags = numberOfBags;
+        this.totalBaggageWeight = totalBaggageWeight;
+
     }
 
     public String getName() {
@@ -22,5 +24,13 @@ public class Passenger {
 
     public void setNumberOfBags(int numberOfBags) {
         this.numberOfBags = numberOfBags;
+    }
+
+    public int getTotalPassengerBaggageWeight() {
+        return totalBaggageWeight;
+    }
+
+    public void setTotalBaggageWeight(int totalBaggageWeight) {
+        this.totalBaggageWeight = totalBaggageWeight;
     }
 }
