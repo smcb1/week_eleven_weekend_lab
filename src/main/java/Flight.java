@@ -101,4 +101,11 @@ public class Flight {
         return totalBaggageWeight;
     }
 
+    public int getRemainingBaggageWeight() {
+        int totalRemainingBaggageWeight = this.getMaxBaggageWeight();
+        for (Passenger passenger : this.passengerManifest) {
+            totalRemainingBaggageWeight -= passenger.getTotalPassengerBaggageWeight();
+        }
+        return totalRemainingBaggageWeight;
+    }
 }

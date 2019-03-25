@@ -21,4 +21,7 @@ public class FlightManager {
     }
 
 
+    public int getRemainingBaggageWeight() {
+        return this.flight.getRemainingBaggageWeight();
+    }
 }
